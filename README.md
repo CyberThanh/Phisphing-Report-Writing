@@ -79,6 +79,10 @@ Utilized Hybrid Analysis to sandbox the URL.
 ## Summary 
 This email was flagged as a phishing email within the environment.  Throughout the investigation, domain tools, sandbox, email records, URL scanners were utilized to analyze the level of maliciousness in this email. The investigation analysis results display that this was a true positive and this email was not legitimate. Pending peer review from fellow analysis.
 
+The next section will highlight recommend defensive measures.
+
+<details close>
+
 <div>
   
 --------------------------------
@@ -90,7 +94,7 @@ Recommeded step include adhering to the Malware Incident Response Playbook:
 
 Preparation:
 - Determine the members of the Cybersecurity Incident Response Team (CSIRT).
-- Define escalation paths.
+- Identify escalation paths.
 - Evaluate and confirm that backups are secure and not impacted by the incident.
 
 Idenitification:
@@ -103,4 +107,29 @@ Containment:
 - Utilize information on intial entry point to close any gaps, such as, firewall misconfiguration and email rules misconfiguration.
 - If additional hosts were found to be infected, then appropriate measure to isolate associated systems to these hosts must be taken.
 - Submit hash value to community sources, such as, VirusTotal.
-- 
+
+Eradication: 
+- Preserve artifacts, systems, and relevant backups.
+- Preserve collected volatile data.  
+
+Recovery:
+- Restore affected systems from clean backups that was before the infection. 
+- Rebuild machines that were not restorable from backups.
+- Remediate any vulnerabilities and gaps that were found during the investigation.
+- Reset all passwords for affected accounts.
+- Monitor malicious activity related to the incident.
+
+Lesson Learned:
+- Answer the following questions
+    What went well during the investigation?
+    What could be improved during the investigation?
+    What vulnerabilities or security gaps i that were identified?
+    How will or were these vulnerabilities or gaps be remediated?
+    What actions can be taken to prevent similar incidents in the future?
+
+## If user click on just a general phishing link
+- Check network event logs or organization's VPN logs to document which users click on the link and when they click on the link.
+- If the logs show no user interaction, then escalate to tune out the sender.  
+- If the logs show the user clicked on the link, then escalate to analyze the system to determine the type of phisphing attack.
+- After the investigation, suggest users who clicked on the link or open attachment for additional phishing awareness training.  
+  
